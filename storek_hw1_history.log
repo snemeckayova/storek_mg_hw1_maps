@@ -1,0 +1,48 @@
+ 2028  mkcd storek_mg_hw1_mapper
+ 2029  git init
+ 2030  touch README.md
+ 2031  git add .
+ 2032  git commit -m "Initial commit"
+ 2033  git remote add origin git@gitlab.fi.muni.cz:xstorek/storek_mg_hw1_mapper.git
+ 2034  git push -u origin master
+ 2035  git switch -c omap
+ 2036  touch maneska.omap
+ 2037  git add .
+ 2038  git commit -m "Create map file"
+ 2039  git switch master 
+ 2040  ls
+ 2041  git switch -c xmap
+ 2042  touch ISSprOM2019-2.xmap
+ 2043  git add .
+ 2044  git commit -m "Create symbols file"
+ 2045  git status
+ 2046  git add .
+ 2047  git commit -m "Add symbol set"
+ 2048  touch note.txt
+ 2049  git stash
+ 2050  git add .
+ 2051  git stash
+ 2052  git switch master 
+ 2053  git push origin master
+ 2054  git switch omap 
+ 2055  git push origin omap
+ 2056  git switch master 
+ 2057  git merge omap
+ 2058  git push origin master
+ 2059  git tag
+ 2060  git tag --list
+ 2061  ls
+ 2062  echo "Lorem ipsum dolor sit amet" > README.md 
+ 2063  git commit -a -m "Update readme"
+ 2064  git tag
+ 2065  git help tag
+ 2066  git tag lorem-ipsum
+ 2067  git help tag
+ 2068  git tag tag
+ 2069  git tag --list
+ 2070  tag -d tag
+ 2071  git tag -d tag
+ 2072  git push --tags
+ 2073  git push origin master 
+ 2074  git graph # this is an alias for git log --graph --decorate etc etc...
+ 2075  history | tail -n 100 > storek_hw1_history.log
